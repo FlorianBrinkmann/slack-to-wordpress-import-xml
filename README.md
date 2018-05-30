@@ -3,7 +3,7 @@ Converts a Slack export to a XML file which can be imported into WordPress.
 
 ## Usage
 
-1. Place the `slack-to-wordpress-converter.php` and `inc` folder in the Slack export directory.
+1. Place the `slack-to-wordpress-converter.php` in the Slack export directory.
 2. Run the script via command line or GET params in the browser:
     1. Command line: `php slack-to-wordpress-converter.php start-date="01.01.2016" end-date="05.01.2016"`
     2. Call the `slack-to-wordpress-converter.php` in the browser and add start and/or end date with `slack-to-wordpress-converter.php?start-date="01.01.2016"&end-date="05.01.2016"
