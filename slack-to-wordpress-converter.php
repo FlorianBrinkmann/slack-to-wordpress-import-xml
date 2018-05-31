@@ -2172,7 +2172,7 @@ foreach ( $xml_export_array as $key => $value ) {
 		$item_element->appendChild( $pubDate_element );
 		$creator_element = $xml_file_markup->createElementNS( 'http://purl.org/dc/elements/1.1/', 'dc:creator' );
 		$item_element->appendChild( $creator_element );
-		$creator_element->appendChild( $xml_file_markup->createCDATASection( 'florian' ) );
+		$creator_element->appendChild( $xml_file_markup->createCDATASection( 'author' ) );
 		$content_element = $xml_file_markup->createElementNS( 'http://purl.org/rss/1.0/modules/content/', 'content:encoded' );
 		$item_element->appendChild( $content_element );
 		$content_element->appendChild( $xml_file_markup->createCDATASection( $post_markup ) );
