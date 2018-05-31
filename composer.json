@@ -1,0 +1,13 @@
+{
+    "name": "florianbrinkmann/slack-to-wordpress-converter",
+    "description": "Script that converts a Slack export to a WordPress import file.",
+    "require": {
+        "erusev/parsedown": "^1.7"
+    },
+    "authors": [
+        {
+            "name": "Florian Brinkmann",
+            "email": "kontakt@florianbrinkmann.com"
+        }
+    ]
+}
