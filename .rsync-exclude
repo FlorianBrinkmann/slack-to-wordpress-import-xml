@@ -1,0 +1,6 @@
+- .git/
+- slack-to-wordpress-converter/
+- composer.json
+- composer.lock
+- slack-to-wordpress-converter.zip
+- .*
