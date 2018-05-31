@@ -10,6 +10,12 @@
  * @link https://gist.github.com/levelsio/122907e95956602e5c09
  */
 
+// Load Composer autoloader. From https://github.com/brightnucleus/jasper-client/blob/master/tests/bootstrap.php#L55-L59
+$autoloader = dirname( __FILE__ ) . '/vendor/autoload.php';
+if ( is_readable( $autoloader ) ) {
+    require_once $autoloader;
+}
+
 /**
  * Set high memory limit.
  */
