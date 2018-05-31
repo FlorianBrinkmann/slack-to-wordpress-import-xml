@@ -1,0 +1,21 @@
+language: php
+php:
+- '7.1'
+script:
+- 
+before_deploy:
+- composer install --no-dev
+- composer dump-autoload -o
+- mkdir -p slack-to-wordpress-converter
+- rsync -rav --exclude-from='.rsync-exclude' --delete-excluded ./ slack-to-wordpress-converter
+- zip -r slack-to-wordpress-converter.zip slack-to-wordpress-converter/
+- rm -rf slack-to-wordpress-converter
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: EdoJrR7W0EG4Gqc7WUVUC3M3U2lNc8nfimP79f3STS+I76x0Hcx5wIB8O1kczqh8YHAarTUCqR9vszehFMr6PoUVqibq5sw/Zq2M5apBcjAwS9giHJj+6YHj8YZogO2QlY14zSk7/e0ghGpoYGG6PcEclwy7MoASbJ8epRzmwCyBr64b5p8WLdM3yWji4kPAGP+0fTuFd0NiHwDHPs0ONFGRCnpvRVsbR8lKfQ7wk5eAdZvhCS/sZLR3QTl3Io463/vqGcOPBDmpTnp2YAffbnVwefOXDTQXlDY5qx4jvYcZFZ3GKAYuOm8iselYnavl/TzYYldUGQzGtVDDOUbjye09UNXZGr3h3Cpy6Qv9d9N8M6eQkYqXjZs+5wURWKngoReLlfhb/US+Z3ZuRwwbe3JjZ1SlgXXaksriQt9Xy6Xcu1KcVVVrqdVbeUjMpdyEQy1dGC4a3tbHQiBV5a2cU6EWYbEee+jQMhZZMWPwcpRoFDPDfOL9eLbe4Q3D6ohZp2fB4QU2YV/4nRm3FySidv3Zl2J45dYAv7QLMgn92XiDwc8vVnecRWbifXID7nycllpj1KvY2srSI/9JkbvOjM5GxvE01n47MOHGzwCtttHTRPaG50AY2DAr41qtq9xt9NNeoNbWoO998MueboVK20kr5cfZWB6aCVb36kurjcs=
+  file: slack-to-wordpress-converter.zip
+  on:
+    repo: florianbrinkmann/slack-to-wordpress-converter
+tags: true
