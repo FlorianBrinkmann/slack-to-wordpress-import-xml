@@ -117,7 +117,7 @@ foreach ( $files as $channel ) {
 	/**
 	 * Check if we have the pseudo directories for current or parant directory.
 	 */
-	if ( '.' === $channel || '..' === $channel || '.idea' === $channel ) {
+	if ( '.' === $channel || '..' === $channel || '.idea' === $channel || 'vendor' === $channel ) {
 		continue;
 	}
 
