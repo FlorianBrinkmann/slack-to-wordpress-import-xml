@@ -2084,9 +2084,9 @@ $xml_file_markup->createAttributeNS( 'http://purl.org/dc/elements/1.1/', 'dc:att
 $xml_file_markup->createAttributeNS( 'http://wordpress.org/export/1.2/', 'wp:attr' );
 $channel_element = $xml_file_markup->createElement( 'channel' );
 $rss_element->appendChild( $channel_element );
-$title_element = $xml_file_markup->createElement( 'title', 'Slack-Archiv' );
+$title_element = $xml_file_markup->createElement( 'title', 'Slack-Export' );
 $channel_element->appendChild( $title_element );
-$description_element = $xml_file_markup->createElement( 'description', 'Slack-Archiv des DEWP-Teams' );
+$description_element = $xml_file_markup->createElement( 'description', 'Slack-Export für WordPress' );
 $channel_element->appendChild( $description_element );
 $pubDate_element = $xml_file_markup->createElement( 'pubDate', 'Thu, 28 Jul 2016 07:23:02 +0000' );
 $channel_element->appendChild( $pubDate_element );
